@@ -13,8 +13,11 @@ nav{
     margin-right:100px;
     position:sticky;
 }
-#introduction-article{
+.introduction-article{
     text-align:center;
+}
+.menu-height{
+    max-height:10px;
 }
 nav ul li{
     list-style-type: none;
@@ -46,4 +49,8 @@ li a:hover{
 .menu{
     display:flex;
     gap:100px;
+}
+.menu h2{
+    width:110px;
+    overflow:hidden;
 }
