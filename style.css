@@ -14,7 +14,9 @@ nav{
     position:sticky;
 }
 .introduction-article{
-    text-align:center;
+    text-align:justify;
+    animation-name: intro;
+    animation-duration:5s;
 }
 .menu-height{
     max-height:10px;
@@ -24,6 +26,7 @@ nav ul li{
     margin:0;
     padding:10px;
     width:200px;
+    letter-spacing: 0.2em;
 }
 li a{
     display:block;
@@ -35,6 +38,7 @@ li a{
 li a:hover{
     background-color: rgb(227, 227, 205);
     transform:scale(1.1,1.1);
+    font-weight:600;
 }
 
 .introduction-article{
@@ -42,15 +46,88 @@ li a:hover{
     top:20px;
     left:40px;
     margin-right:100px;
-    background-image: repeating-linear-gradient(-45deg, rgba(128, 118, 118, 0.1), rgba(255,255,255, 0.1) 1px, transparent 1px, transparent 6px);
+    /* background-image: repeating-linear-gradient(-45deg, rgba(128, 118, 118, 0.1), rgba(255,255,255, 0.1) 1px, transparent 1px, transparent 6px); */
     /* text-align:center; */
 }
+main p{
+    line-height: 2;
+    letter-spacing:0.2em;
+}
+ol li {
+    letter-spacing: 0.2em;
+}
 
+.input-data{
+    display:flex;
+    flex-direction:row;
+    gap:10px;
+    position:relative;
+}
+.input-data label{
+    font-style:italic;
+    font-weight:600;
+}
+
+fieldset{
+    display:flex;
+    flex-direction:column;
+    border:none;
+    gap:50px;
+}
+fieldset label{
+    font-size:large;
+}
+fieldset input{
+    display:block;
+    font-size:large;
+    border:none;
+    border-bottom:1px solid rgb(232, 227, 227);
+    background-color: rgba(237, 237, 197, 0);;
+}
+fieldset input:focus{
+    outline:none;
+}
+fieldset textarea{
+    border:none;
+    resize:none;
+    background:transparent;
+}
+fieldset textarea{
+    outline:none;   
+}
+fieldset .underline{
+    position: absolute;
+    width:300px;
+    top:55px;
+    left:70px;
+    border-top:solid rgb(232, 227, 227) 1px;
+}
+
+@keyframes intro{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:100;
+    }
+}
+/* for menu page */
 .menu{
     display:flex;
-    gap:100px;
+    flex-direction: column;
+    gap:10px;
 }
 .menu h2{
     width:110px;
     overflow:hidden;
+}
+.menu .menu-card{
+    padding-left:90px;
+    padding-right:90px;
+    border:solid #bf9494b3 1px;
+    border-radius: 5%;
+}
+
+.menu-center{
+    text-align:center;
 }
